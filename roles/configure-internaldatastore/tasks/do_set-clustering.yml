@@ -40,6 +40,8 @@
   - name: Set ids_discovery_seed_hosts facts
     set_fact:
       ids_discovery_seed_hosts: "{{ output_inventory_hosts }}"
+    
+  - debug: var=ids_discovery_seed_hosts verbosity=1
 
 ########### setup the general config
 
@@ -85,6 +87,8 @@
       - name: Set ids_cluster_initial_master_nodes facts
         set_fact:
           ids_cluster_initial_master_nodes: "{{ output_inventory_hosts }}"
+
+      - debug: var=ids_cluster_initial_master_nodes verbosity=1
 
       - name: Add initial_master_nodes to the main config
         set_fact:
