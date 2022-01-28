@@ -102,7 +102,7 @@
 
   - name: Write the config for a InternalDataStore node
     template:
-      src: "{{ ids_cfgs | to_nice_yaml( width=50, explicit_start=True, explicit_end=True) }}" 
+      src: "{{ ids_cfgs | to_nice_yaml(width=50, explicit_start=True, explicit_end=True) }}" 
       dest: "{{ ids_install_elasticsearch_file }}"
       backup: yes
       owner: "{{ webmethods_user }}"
