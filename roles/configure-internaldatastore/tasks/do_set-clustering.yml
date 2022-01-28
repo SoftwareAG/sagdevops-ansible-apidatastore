@@ -66,6 +66,8 @@
         node.master: "{{ ids_node_master }}"
         node.data: "{{ ids_node_data }}"
         node.ingest: "{{ ids_node_ingest }}"
+        xpack.ml.enabled: false
+        xpack.security.enabled: false
 
 ########### if master node
 
@@ -102,7 +104,7 @@
 
   - name: Write the config for a InternalDataStore node
     template:
-      src: "{{ ids_cfgs | to_nice_yaml(width=50, explicit_start=True, explicit_end=True) }}" 
+      src: elasticsearch_conf.yml.j2
       dest: "{{ ids_install_elasticsearch_file }}"
       backup: yes
       owner: "{{ webmethods_user }}"
