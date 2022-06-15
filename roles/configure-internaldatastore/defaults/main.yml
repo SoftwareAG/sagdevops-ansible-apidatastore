@@ -22,7 +22,8 @@ ids_transport_tcp_port: 9340
 ids_http_port: 9240
 ids_path_data: "{{ ids_install_home }}/data"
 ids_path_logs: "{{ ids_install_home }}/logs"
-ids_path_archives: [ "{{ ids_install_home }}/archives" ]
+ids_path_archives:
+  - "{{ ids_install_home }}/archives"
 
 #### Mandatory params
 
