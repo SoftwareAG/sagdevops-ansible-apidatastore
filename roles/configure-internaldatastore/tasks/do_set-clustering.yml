@@ -47,6 +47,8 @@
         node.master: "{{ ids_node_master }}"
         node.data: "{{ ids_node_data }}"
         node.ingest: "{{ ids_node_ingest }}"
+        xpack.security.enabled: "false"
+        xpack.ml.enabled: "false"
 
 ########### if master node
 
